@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Montserrat';
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+}
+
+.hero {
+    background: linear-gradient(102.35deg, #87C6EC 0.68%, #6195D3 23.34%, #416CBF 42.29%, rgba(18, 71, 175, 0) 100%), url(https://i.ibb.co/N72jr5w/hero-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    max-width: 120rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.hero__img__a {
+flex: 1;
+margin-left: 10%;
+}
+
+.hero__img {
+    max-width:100%;
+}
+
+nav {
+margin-right: 15%;
+}
+
+nav ul li {
+    display: inline-block;
+
+    
+   
+}
+nav ul li  a {
+    text-decoration: none;
+    color: white;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.hero__cta {
+    margin-right: 10%;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1rem;
+
+    border: none;
+    background-color: #1BC768;
+    color: white;
+}
+
+
+.hero__container {
+    margin-left: 10%;
+    color: white;
+    max-width: 45rem;
+    margin-top: 10%;
+}
+
+.hero__container__title {
+    font-size: 2.5rem;
+}
+
+.hero__container__subtitle{ 
+    font-size: 1.25rem;
+    margin-top: 5%;
+}
+
+.hero__container__form {
+     margin-top: 5%;
+     
+}
+.hero__container__form-input {
+    padding: 0.5rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    width: 20rem;
+    height: 2.5rem;
+    float: left;
+    border: none;
+    background-color: #DEE9FF;
+    color: #7A7A7A;
+}
+
+.hero__container__form-search {
+    padding: 0.5rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    float: left;
+    height: 2.5rem;
+    border: none;
+    background-color: #1BC768;
+    color: white;
+}
+
+
+
+.cards {
+    
+}
+
+
+.cards__line {
+width: 80px;
+height: 0px;
+border: 0.10rem solid #416CBF;
+background-color: #416CBF;
+margin-top: 0.25rem;
+margin-bottom: 1.5rem;
+}
+
+.cards__subtitle {
+    color: #5C5C5C;
+    font-size: 1.1rem;
+}
+
+.cards__grid-item {
+justify-items: center;
+padding: 2rem;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.cards__grid__container {
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    margin-left: 10%;
+    margin-right: 10%;
+    gap: 10%;
+    margin-top: 7%;
+}
+
+.cards__grid-item p {
+    padding-top: 0.5rem;
+    padding-bottom: 1.25rem;
+}
+
+.cards__grid-item a {
+text-decoration: none;
+color: #416CBF;
+font-weight: bold;
+}
+
+
+.cards__header {
+    margin-top: 5%;
+    margin-left: 10%;
+    max-width: 25rem;
+}
+
+.cards__header h2 {
+
+}
+
+
+
+.news__line {
+    width: 80px;
+height: 0px;
+border: 0.10rem solid #1BC768;
+background-color: #1BC768;
+margin-top: 0.25rem;
+margin-bottom: 1.5rem;
+}
+.news__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    margin-left: 10%;
+    margin-right: 10%;
+    gap: 10%;
+    margin-top: 3%;
+    }
+
+    .news__subject__1 {
+        position: absolute;
+        background-color: #2ECC71;
+        padding: 0.5rem;
+        margin-left: 1%;
+        margin-top: 1%;
+        color: white;
+        font-size: 0.7rem;
+    }
+
+    .news__date {
+        color: #393939;
+        margin: 5% 0;
+        font-size: 0.7rem;
+    }
+
+    .news__title__1 {
+        margin-bottom: 3%;
+        color: #393939;
+    }
+
+    .news__subtitle__1 {
+        color: #393939;
+    }
+
+
+    .news__header {
+        margin-left: 10%;
+    }
+    
+.footer__grid__1 iframe {
+    max-height: 100%;
+}
+
+
+
+    .footer {
+        color: white;
+        height: 50vh;
+        background-color: #416CBF;
+    
+    }
+
+    .footer__grid {
+        display: grid;
+        grid-template-columns: 3fr 1fr 1fr 1fr;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 3%;
+        gap: 5%;
+    }
+
+   
+
+    .footer h3 {
+        margin-bottom: 20%;
+    }
+
+    .footer a {
+        text-decoration: none;
+        color: white;
+    }
+
+
+    .copyright {
+        color: rgba(255, 255, 255, 0.50);
+        text-align: center;
+        font-size: 0.7rem;
+    }
