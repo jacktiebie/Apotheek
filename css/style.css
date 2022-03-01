@@ -13,7 +13,7 @@ section {
     height: 100vh;
     width: 100vw;
 }
-
+/* http://pharmacyresearchuk.org/wp-content/uploads/2012/12/pace-osu-stress-management-pharmacists.jpg */
 .hero {
     background: linear-gradient(102.35deg, #87C6EC 0.68%, #6195D3 23.34%, #416CBF 42.29%, rgba(18, 71, 175, 0) 100%), url(https://i.ibb.co/N72jr5w/hero-background.png);
     background-repeat: no-repeat;
@@ -54,11 +54,16 @@ nav ul li  a {
     padding-right: 1.5rem;
 }
 
+nav ul li a:hover {
+    text-decoration: underline;
+    text-decoration-color:#1BC768;
+}
+
+
 .hero__cta {
     margin-right: 10%;
     padding: 0.5rem 1.5rem;
     border-radius: 1rem;
-
     border: none;
     background-color: #1BC768;
     color: white;
@@ -132,7 +137,7 @@ margin-bottom: 1.5rem;
 .cards__grid-item {
 justify-items: center;
 padding: 2rem;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.381);
 }
 
 
