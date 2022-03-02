@@ -47,6 +47,7 @@ nav ul li {
     
    
 }
+
 nav ul li  a {
     text-decoration: none;
     color: white;
@@ -261,4 +262,20 @@ margin-bottom: 1.5rem;
         color: rgba(255, 255, 255, 0.50);
         text-align: center;
         font-size: 0.7rem;
+    }
+
+
+    /* AANDOENINGEN PAGINA */
+    .hero__aandoeningen {
+        background-color: red;
+        height: 500vh;
+
+    }
+
+    .header__aandoeningen {
+        background-color: #416CBF;
+        margin-top: 0%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        
     }
