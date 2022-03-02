@@ -29,32 +29,32 @@ require 'includes/db_connection.php';
 
         <section class="hero__aandoeningen">
         <div class="hero__aandoeningen__container-1">
-        <a href="#">A</a>
-        <a href="#">B</a>
-        <a href="#">C</a>
-        <a href="#">D</a>
-        <a href="#">E</a>
-        <a href="#">F</a>
-        <a href="#">G</a>
-        <a href="#">H</a>
-        <a href="#">I</a>
-        <a href="#">J</a>
-        <a href="#">K</a>
-        <a href="#">L</a>
-        <a href="#">M</a>
-        <a href="#">N</a>
-        <a href="#">O</a>
-        <a href="#">P</a>
-        <a href="#">Q</a>
-        <a href="#">R</a>
-        <a href="#">S</a>
-        <a href="#">T</a>
-        <a href="#">U</a>
-        <a href="#">V</a>
-        <a href="#">W</a>
-        <a href="#">X</a>
-        <a href="#">Y</a>
-        <a href="#">Z</a>
+        <a href="#A">A</a>
+        <a href="#B">B</a>
+        <a href="#C">C</a>
+        <a href="#D">D</a>
+        <a href="#E">E</a>
+        <a href="#F">F</a>
+        <a href="#G">G</a>
+        <a href="#H">H</a>
+        <a href="#I">I</a>
+        <a href="#J">J</a>
+        <a href="#K">K</a>
+        <a href="#L">L</a>
+        <a href="#M">M</a>
+        <a href="#N">N</a>
+        <a href="#O">O</a>
+        <a href="#P">P</a>
+        <a href="#Q">Q</a>
+        <a href="#R">R</a>
+        <a href="#S">S</a>
+        <a href="#T">T</a>
+        <a href="#U">U</a>
+        <a href="#V">V</a>
+        <a href="#W">W</a>
+        <a href="#X">X</a>
+        <a href="#Y">Y</a>
+        <a href="#Z">Z</a>
 
         </div>
         <div class="hero__aandoeningen__container-2">
@@ -66,11 +66,19 @@ require 'includes/db_connection.php';
         $resultCheck = mysqli_num_rows($result);
         if ($resultCheck > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
-                echo $row['naam'] . "<br>";
-            }
+                    ?>
+                     <a id="<?php echo $row['naam']; ?>" href="aandoeningen/<?php echo $row['ID']; ?>.php"><?php echo $row['naam']; ?></a> <br> 
+                    <?php
+                }
+                
+            
         }
-
+    
         ?>
+
+        
+
+        
 
         </div>
         </section>

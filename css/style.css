@@ -7,6 +7,7 @@
     box-sizing: border-box;
     overflow-x: hidden;
     font-family: 'Montserrat';
+    scroll-behavior: smooth;
 }
 
 section {
@@ -279,3 +280,15 @@ margin-bottom: 1.5rem;
         padding-bottom: 2%;
         
     }
+
+    .hero__aandoeningen__container-2 a {
+        color: green;
+    
+    }
+
+    #A, #B, #C, #D, #E, #F, #G, #H, #I ,#J ,#K, #L ,#M,#N,#O,#P,#Q,#R,#S,#T,#U,#F,#V,#W,#X,#Y,#Z {
+        color: yellow !important;
+    }
+
+
+   
