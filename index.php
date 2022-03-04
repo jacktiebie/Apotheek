@@ -22,8 +22,8 @@ require 'includes/db_connection.php';
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="contact.php">Service</a></li>
-                    <li><a href="#">Voorlichting</a></li>
-                    <li><a href="#">Medicijnen</a></li>
+                    <li><a href="aandoeningen.php">Voorlichting</a></li>
+                    <li><a href="aandoeningen-lijst.php">Medicijnen</a></li>
                 </ul>
             </nav>
             <button class="hero__cta">Login</button>
