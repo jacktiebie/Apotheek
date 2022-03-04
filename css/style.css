@@ -19,6 +19,7 @@ section {
     background: linear-gradient(102.35deg, #87C6EC 0.68%, #6195D3 23.34%, #416CBF 42.29%, rgba(18, 71, 175, 0) 100%), url(https://i.ibb.co/N72jr5w/hero-background.png);
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 100;
 }
 header {
     display: flex;
@@ -27,6 +28,7 @@ header {
     align-items: center;
     justify-content: center;
     margin-top: 2%;
+    z-index: 100;
 }
 
 .hero__img__a {
@@ -173,7 +175,6 @@ font-weight: bold;
 }
 
 .cards__header h2 {
-
 }
 
 
@@ -267,11 +268,33 @@ margin-bottom: 1.5rem;
 
 
     /* AANDOENINGEN PAGINA */
-    .hero__aandoeningen {
-        background-color: red;
-        height: 500vh;
 
+    .hero__aandoeningen {
+        background-color: #416CBF;
+        background-image: url(https://i.ibb.co/TP2vq5d/aandoeningen-background.png);
+        background-size: cover;
+    
     }
+
+   
+
+
+
+
+    
+
+    /* AANDOENINGEN  LIJST PAGINA */
+    .hero__aandoeningen__lijst {
+        background-color: #FFF;
+    }
+
+    
+
+
+
+
+
+
 
     .header__aandoeningen {
         background-color: #416CBF;
@@ -281,14 +304,51 @@ margin-bottom: 1.5rem;
         
     }
 
-    .hero__aandoeningen__container-2 a {
-        color: green;
-    
+.hero__aandoeningen__container-1 {
+float: left;
+margin-top: 12%;
+margin-left: 10%;
+border-left: 0.03rem solid #416CBF;
+padding-left: 2rem;
+}
+
+.hero__aandoeningen__container-1 a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 0rem 0.2rem;
+}
+
+
+
+    .hero__aandoeningen__container-2  a {
+        color: #000;
+        text-decoration: none;
+        margin-left: 20%;
+        margin-top: 5%;
+    }
+
+    .hero__aandoeningen__container-2 h2 {
+        margin-left: 20%;
+        margin-top: 7%;
+    }
+
+   
+    .hero__aandoeningen__container-2__line {
+        width: 580px;
+    border: 0.03rem solid #416CBF;
+    background-color: #416CBF;
+    margin-left: 20%;
+    margin-bottom: 5%;
     }
 
     #A, #B, #C, #D, #E, #F, #G, #H, #I ,#J ,#K, #L ,#M,#N,#O,#P,#Q,#R,#S,#T,#U,#F,#V,#W,#X,#Y,#Z {
-        color: yellow !important;
+        font-weight: bold;
+        line-height: 35px;
+        cursor:default;
     }
+
+
 
 
    

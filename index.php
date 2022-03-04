@@ -17,10 +17,10 @@ require 'includes/db_connection.php';
 <body>
     <section class="hero">
         <header>
-            <a class="hero__img__a" href="index.html"><img class="hero__img" src="images/logo/logo.svg" alt="Logo"></a>
+            <a class="hero__img__a" href="index.php"><img class="hero__img" src="images/logo/logo.svg" alt="Logo"></a>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="#">Service</a></li>
                     <li><a href="#">Voorlichting</a></li>
                     <li><a href="#">Medicijnen</a></li>
