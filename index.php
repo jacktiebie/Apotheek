@@ -21,7 +21,7 @@ require 'includes/db_connection.php';
             <nav>
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="#">Service</a></li>
+                    <li><a href="contact.php">Service</a></li>
                     <li><a href="#">Voorlichting</a></li>
                     <li><a href="#">Medicijnen</a></li>
                 </ul>
