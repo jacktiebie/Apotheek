@@ -64,15 +64,12 @@ require 'includes/db_connection.php';
         <div class="news__grid">
             <div class="section__grid__1">
                 <?php
-                $sql = "SELECT subject, img, date, title, subtitle FROM news WHERE id = 1";
+                $sql = "SELECT * FROM news WHERE id = 1";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
                     // output data of each row
                     while ($row = $result->fetch_assoc()) {
-
-
-
                 ?>
                         <p class="news__subject__1"><?php echo $row['subject']; ?></p>
                         <?php echo '<img class="news__img__1" src="' . $row['img'] . '"></img>'; ?>

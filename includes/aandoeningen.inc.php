@@ -1,5 +1,5 @@
 <?php
-require 'includes/db_connection.php';
+require 'db_connection.php';
 ?>
 
 

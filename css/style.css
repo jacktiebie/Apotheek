@@ -73,6 +73,7 @@ nav ul li a:hover {
   border: none;
   background-color: #1bc768;
   color: white;
+  text-decoration: none;
 }
 
 
@@ -378,4 +379,24 @@ nav ul li a:hover {
 
 .contact__form__container {
   background-color: #416cbf;
+}
+
+
+
+/* APO */
+
+
+.APO__aside {
+  background-color: blue;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 13vw;
+}
+
+
+.APO__aside ul  {
+  display: flex;
+  flex-direction: column;
 }

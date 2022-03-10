@@ -21,7 +21,7 @@ require 'includes/db_connection.php';
         <div class="hero__container">
             <h1 class="hero__container__title">Betrouwbare informatie over ziekte en gezondheid</h1>
             <p class="hero__container__subtitle">In samenwerking met Thuisarts.nl bieden wij u </br> gezondheidsinormatie. </p>
-            <form class="hero__container__form" action="aandoeningen.inch.php" method="POST">
+            <form class="hero__container__form" action="includes/aandoeningen.inc.php" method="POST">
                 <input class="hero__container__form-input" placeholder="Vind medicijnen in onze webshop" type="text" name="aandoeningen-query" />
                 <input class="hero__container__form-search" type="submit" name="aandoeningen-submit" value="Search" />
             </form>
