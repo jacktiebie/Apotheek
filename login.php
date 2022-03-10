@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,15 +21,25 @@
                     <li><a href="#">Medicijnen</a></li>
                 </ul>
             </nav>
-            <button class="hero__cta">Login</button>
+        
         </header>
         <div class="contact__container">
             <p>LOGIN</p>
             <form class="contact-form" action="includes/login.inc.php" method="post">
-            <input type="text" name="name" placeholder="Username/Email" >
-            <input type="password" name="pwd" placeholder="Password..." >
+            <input type="text" name="uid" placeholder="Gebruikersnaam/Email" >
+            <input type="password" name="pwd" placeholder="Wachtwoord" >
             <button type="submit" name="submit">Log In</button>
         </div>
+        <?php 
+   if (isset($_GET["error"])) {
+       if ($_GET['error'] == "emptyinput") {
+        echo "<p>Vul alle velden in</p>";
+       }
+       else if ($_GET["error"] == "wronglogin") {
+        echo "<p>Incorrecte login informatie</p>";
+       }
+   }
+    ?>
     </section>
 </body>
 </html>

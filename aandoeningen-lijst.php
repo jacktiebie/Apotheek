@@ -1,5 +1,6 @@
 <?php
 require 'includes/db_connection.php';
+session_start();
 ?>
 
 
@@ -26,7 +27,13 @@ require 'includes/db_connection.php';
                 <li><a href="#">Medicijnen</a></li>
             </ul>
         </nav>
-        <button class="hero__cta">Login</button>
+        <?php 
+if (isset($_SESSION["useruid"])) {
+    echo "<button class='hero__cta'>APO</button>";
+} else {
+    echo "<button class='hero__cta'>Login</button>";
+}
+            ?>
     </header>
 
     <section class="hero__aandoeningen__lijst">

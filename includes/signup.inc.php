@@ -8,7 +8,7 @@ if (isset($_POST["submit"])) {
 //get data from the url entered by the user
 $name = $_POST["name"];
 $email = $_POST["email"];
-$username = $_POST["uid"];
+$usrname = $_POST["uid"];
 $pwd = $_POST["pwd"];
 $pwdRepeat = $_POST["pwdrepeat"];
 
@@ -17,11 +17,11 @@ require_once 'db_connection.php';
 //include functions.inc.php
 require_once 'functions.inc.php';
 
-if (emptyInputSignup($name, $email, $username, $pwd, $pwdRepeat) !== false) {
+if (emptyInputSignup($name, $email, $usrname, $pwd, $pwdRepeat) !== false) {
     header("location: ../signup.php?error=emptyinput");
     exit();
 }
-if (invalidUid($username) !== false) {
+if (invalidUid($usrname) !== false) {
     header("location: ../signup.php?error=invaliduid");
     exit();
 }
@@ -34,12 +34,12 @@ if (pwdMatch($pwd, $pwdRepeat) !== false) {
     header("location: ../signup.php?error=passwordmatch");
     exit();
 }
-if (uidExists($conn, $username, $email) !== false) {
+if (uidExists($conn, $usrname, $email) !== false) {
     header("location: ../signup.php?error=usernametaken");
     exit();
 }
 
-createUser($conn, $name, $email, $username, $pwd);
+createUser($conn, $name, $email, $usrname, $pwd);
 
 
 

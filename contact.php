@@ -11,18 +11,7 @@
 
 <body>
     <section class="contact__form__container">
-        <header>
-            <a class="hero__img__a" href="index.php"><img class="hero__img" src="images/logo/logo.svg" alt="Logo"></a>
-            <nav>
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="contact.php">Service</a></li>
-                    <li><a href="#">Voorlichting</a></li>
-                    <li><a href="#">Medicijnen</a></li>
-                </ul>
-            </nav>
-            <button class="hero__cta">Login</button>
-        </header>
+    <?php  include_once 'header.php' ?>
         <div class="contact__container">
             <p>CONTACT FORM</p>
             <form class="contact-form" action="contactform.php" method="post">

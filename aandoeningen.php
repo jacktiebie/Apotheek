@@ -17,18 +17,7 @@ require 'includes/db_connection.php';
 
 <body>
     <section class="hero__aandoeningen">
-        <header>
-            <a class="hero__img__a" href="index.php"><img class="hero__img" src="images/logo/logo.svg" alt="Logo"></a>
-            <nav>
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">Voorlichting</a></li>
-                    <li><a href="#">Medicijnen</a></li>
-                </ul>
-            </nav>
-            <button class="hero__cta">Login</button>
-        </header>
+    <?php  include_once 'header.php' ?>
         <div class="hero__container">
             <h1 class="hero__container__title">Betrouwbare informatie over ziekte en gezondheid</h1>
             <p class="hero__container__subtitle">In samenwerking met Thuisarts.nl bieden wij u </br> gezondheidsinormatie. </p>

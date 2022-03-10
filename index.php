@@ -16,18 +16,7 @@ require 'includes/db_connection.php';
 
 <body>
     <section class="hero">
-        <header>
-            <a class="hero__img__a" href="index.php"><img class="hero__img" src="images/logo/logo.svg" alt="Logo"></a>
-            <nav>
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="contact.php">Service</a></li>
-                    <li><a href="aandoeningen.php">Voorlichting</a></li>
-                    <li><a href="aandoeningen-lijst.php">Medicijnen</a></li>
-                </ul>
-            </nav>
-            <button class="hero__cta">Login</button>
-        </header>
+        <?php  include_once 'header.php' ?>
         <div class="hero__container">
             <h1 class="hero__container__title">Apotheek Schut zorgt voor uw medicijnvoorschriften</h1>
             <p class="hero__container__subtitle">We hebben alle medicijnen die uw arts heeft voorgeschreven voor uw gezondheid bovendien kunnen we ze bij

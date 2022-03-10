@@ -39,22 +39,22 @@
         echo "<p>Vul alle velden in</p>";
        }
        else if ($_GET["error"] == "invaliduid") {
-        echo "<p>Choose a proper username</p>";
+        echo "<p>Kies een juiste gebruikersnaam</p>";
        }
        else if ($_GET["error"] == "invalidemail") {
-        echo "<p>Choose a proper email</p>";
+        echo "<p>Kies een juiste email</p>";
        }
        else if ($_GET["error"] == "passwordmatch") {
-        echo "<p>Passwords don't match</p>";
+        echo "<p>Wachtwoorden komen niet overeen</p>";
        }
        else if ($_GET["error"] == "stmtfailed") {
-           echo "<p>Something went wrong try again</p>";
+           echo "<p>Iets ging fout! Probeer het opnieuw</p>";
        }
        else if ($_GET["error"] == "usernametaken") {
-        echo "<p>Username was already taken</p>";
+        echo "<p>Gebruikersnaam is al in gebruik</p>";
        }
        else if ($_GET["error"] == "none") {
-           echo "<p>You have singed up</p>";
+           echo "<p>U bent ingelogd</p>";
        }
    }
     ?>
