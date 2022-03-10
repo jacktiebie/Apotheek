@@ -1,400 +1,380 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    font-family: 'Montserrat';
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Montserrat";
+  scroll-behavior: smooth;
 }
 
 section {
-    height: 100vh;
-    width: 100vw;
+  height: 100vh;
+  width: 100vw;
 }
 /* http://pharmacyresearchuk.org/wp-content/uploads/2012/12/pace-osu-stress-management-pharmacists.jpg */
 .hero {
-    background: linear-gradient(102.35deg, #87C6EC 0.68%, #6195D3 23.34%, #416CBF 42.29%, rgba(18, 71, 175, 0) 100%), url(https://i.ibb.co/N72jr5w/hero-background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 100;
+  background: linear-gradient(
+      102.35deg,
+      #87c6ec 0.68%,
+      #6195d3 23.34%,
+      #416cbf 42.29%,
+      rgba(18, 71, 175, 0) 100%
+    ),
+    url(https://i.ibb.co/N72jr5w/hero-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 100;
 }
 header {
-    display: flex;
-    flex-direction: row;
-    max-width: 120rem;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2%;
-    z-index: 100;
+  display: flex;
+  flex-direction: row;
+  max-width: 120rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+  z-index: 100;
 }
 
 .hero__img__a {
-flex: 1;
-margin-left: 10%;
+  flex: 1;
+  margin-left: 10%;
 }
 
 .hero__img {
-    max-width:100%;
+  max-width: 100%;
 }
 
 nav {
-margin-right: 15%;
+  margin-right: 15%;
 }
 
 nav ul li {
-    display: inline-block;
-
-    
-   
+  display: inline-block;
 }
 
-nav ul li  a {
-    text-decoration: none;
-    color: white;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
-    text-decoration-color:#1BC768;
+  text-decoration: underline;
+  text-decoration-color: #1bc768;
 }
-
 
 .hero__cta {
-    margin-right: 10%;
-    padding: 0.5rem 1.5rem;
-    border-radius: 1rem;
-    border: none;
-    background-color: #1BC768;
-    color: white;
+  margin-right: 10%;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: #1bc768;
+  color: white;
 }
 
-
 .hero__container {
-    margin-left: 10%;
-    color: white;
-    max-width: 45rem;
-    margin-top: 10%;
+  margin-left: 10%;
+  color: white;
+  max-width: 45rem;
+  margin-top: 10%;
 }
 
 .hero__container__title {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
-.hero__container__subtitle{ 
-    font-size: 1.25rem;
-    margin-top: 5%;
+.hero__container__subtitle {
+  font-size: 1.25rem;
+  margin-top: 5%;
 }
 
 .hero__container__form {
-     margin-top: 5%;
-     
+  margin-top: 5%;
 }
 .hero__container__form-input {
-    padding: 0.5rem;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    width: 20rem;
-    height: 2.5rem;
-    float: left;
-    border: none;
-    background-color: #DEE9FF;
-    color: #7A7A7A;
+  padding: 0.5rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  width: 20rem;
+  height: 2.5rem;
+  float: left;
+  border: none;
+  background-color: #dee9ff;
+  color: #7a7a7a;
 }
 
 .hero__container__form-search {
-    padding: 0.5rem;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    float: left;
-    height: 2.5rem;
-    border: none;
-    background-color: #1BC768;
-    color: white;
+  padding: 0.5rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  float: left;
+  height: 2.5rem;
+  border: none;
+  background-color: #1bc768;
+  color: white;
 }
-
-
 
 .cards {
-    
 }
 
-
 .cards__line {
-width: 80px;
-height: 0px;
-border: 0.10rem solid #416CBF;
-background-color: #416CBF;
-margin-top: 0.25rem;
-margin-bottom: 1.5rem;
+  width: 80px;
+  height: 0px;
+  border: 0.1rem solid #416cbf;
+  background-color: #416cbf;
+  margin-top: 0.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .cards__subtitle {
-    color: #5C5C5C;
-    font-size: 1.1rem;
+  color: #5c5c5c;
+  font-size: 1.1rem;
 }
 
 .cards__grid-item {
-justify-items: center;
-padding: 2rem;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-    margin-inline: 10%;
+  justify-items: center;
+  padding: 2rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  margin-inline: 10%;
 }
 
-
-
-
 .cards__grid__container {
-    grid-template-columns: 1fr 1fr 1fr;
-    display: grid;
-    margin-left: 7%;
-    margin-right: 10%;
-    margin-top: 7%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  margin-left: 7%;
+  margin-right: 10%;
+  margin-top: 7%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .cards__grid-item p {
-    padding-top: 0.5rem;
-    padding-bottom: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1.25rem;
 }
 
 .cards__grid-item a {
-text-decoration: none;
-color: #416CBF;
-font-weight: bold;
+  text-decoration: none;
+  color: #416cbf;
+  font-weight: bold;
 }
 
-
 .cards__header {
-    margin-top: 5%;
-    margin-left: 10%;
-    max-width: 25rem;
+  margin-top: 5%;
+  margin-left: 10%;
+  max-width: 25rem;
 }
 
 .cards__header h2 {
 }
 
-
-
 .news__line {
-    width: 80px;
-height: 0px;
-border: 0.10rem solid #1BC768;
-background-color: #1BC768;
-margin-top: 0.25rem;
-margin-bottom: 1.5rem;
+  width: 80px;
+  height: 0px;
+  border: 0.1rem solid #1bc768;
+  background-color: #1bc768;
+  margin-top: 0.25rem;
+  margin-bottom: 1.5rem;
 }
 .news__grid {
-    grid-template-columns: 1fr 1fr 1fr;
-    display: grid;
-    margin-left: 10%;
-    margin-right: 10%;
-    gap: 10%;
-    margin-top: 3%;
-    }
-
-    .news__subject__1 {
-        position: absolute;
-        background-color: #2ECC71;
-        padding: 0.5rem;
-        margin-left: 1%;
-        margin-top: 1%;
-        color: white;
-        font-size: 0.7rem;
-    }
-
-    .news__date {
-        color: #393939;
-        margin: 5% 0;
-        font-size: 0.7rem;
-    }
-
-    .news__title__1 {
-        margin-bottom: 3%;
-        color: #393939;
-    }
-
-    .news__subtitle__1 {
-        color: #393939;
-    }
-
-
-    .news__header {
-        margin-left: 10%;
-    }
-    
-.footer__grid__1 iframe {
-    max-height: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  margin-left: 10%;
+  margin-right: 10%;
+  gap: 10%;
+  margin-top: 3%;
 }
 
+.news__subject__1 {
+  position: absolute;
+  background-color: #2ecc71;
+  padding: 0.5rem;
+  margin-left: 1%;
+  margin-top: 1%;
+  color: white;
+  font-size: 0.7rem;
+}
 
+.news__date {
+  color: #393939;
+  margin: 5% 0;
+  font-size: 0.7rem;
+}
 
-    .footer {
-        color: white;
-        height: 50vh;
-        background-color: #416CBF;
-    
-    }
+.news__title__1 {
+  margin-bottom: 3%;
+  color: #393939;
+}
 
-    .footer__grid {
-        display: grid;
-        grid-template-columns: 3fr 1fr 1fr 1fr;
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-top: 3%;
-        gap: 5%;
-    }
+.news__subtitle__1 {
+  color: #393939;
+}
 
-   
+.news__header {
+  margin-left: 10%;
+}
 
-    .footer h3 {
-        margin-bottom: 20%;
-    }
+.footer__grid__1 iframe {
+  max-height: 100%;
+}
 
-    .footer a {
-        text-decoration: none;
-        color: white;
-    }
+.footer {
+  color: white;
+  height: 50vh;
+  background-color: #416cbf;
+}
 
+.footer__grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 3%;
+  gap: 5%;
+}
 
-    .copyright {
-        color: rgba(255, 255, 255, 0.50);
-        text-align: center;
-        font-size: 0.7rem;
-    }
+.footer h3 {
+  margin-bottom: 20%;
+}
 
+.footer a {
+  text-decoration: none;
+  color: white;
+}
 
-    /* AANDOENINGEN PAGINA */
+.copyright {
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  font-size: 0.7rem;
+}
 
-    .hero__aandoeningen {
-        background-color: #416CBF;
-        background-image: url(https://i.ibb.co/TP2vq5d/aandoeningen-background.png);
-        background-size: cover;
-    
-    }
+/* AANDOENINGEN PAGINA */
 
-   
+.hero__aandoeningen {
+  background-color: #416cbf;
+  background-image: url(https://i.ibb.co/TP2vq5d/aandoeningen-background.png);
+  background-size: cover;
+}
 
+/* AANDOENINGEN  LIJST PAGINA */
+.hero__aandoeningen__lijst {
+  background-color: #fff;
+}
 
-
-
-    
-
-    /* AANDOENINGEN  LIJST PAGINA */
-    .hero__aandoeningen__lijst {
-        background-color: #FFF;
-    }
-
-    
-
-
-
-
-
-
-
-    .header__aandoeningen {
-        background-color: #416CBF;
-        margin-top: 0%;
-        padding-top: 2%;
-        padding-bottom: 2%;
-        
-    }
+.header__aandoeningen {
+  background-color: #416cbf;
+  margin-top: 0%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
 
 .hero__aandoeningen__container-1 {
-float: left;
-margin-top: 12%;
-margin-left: 10%;
-border-left: 0.03rem solid #416CBF;
-padding-left: 2rem;
+  float: left;
+  margin-top: 12%;
+  margin-left: 10%;
+  border-left: 0.03rem solid #416cbf;
+  padding-left: 2rem;
 }
 
 .hero__aandoeningen__container-1 a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    padding: 0rem 0.2rem;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  padding: 0rem 0.2rem;
 }
 
+.hero__aandoeningen__container-2 a {
+  color: #000;
+  text-decoration: none;
+  margin-left: 20%;
+  margin-top: 5%;
+}
 
+.hero__aandoeningen__container-2 h2 {
+  margin-left: 20%;
+  margin-top: 7%;
+}
 
-    .hero__aandoeningen__container-2  a {
-        color: #000;
-        text-decoration: none;
-        margin-left: 20%;
-        margin-top: 5%;
-    }
+.hero__aandoeningen__container-2__line {
+  width: 580px;
+  border: 0.03rem solid #416cbf;
+  background-color: #416cbf;
+  margin-left: 20%;
+  margin-bottom: 5%;
+}
 
-    .hero__aandoeningen__container-2 h2 {
-        margin-left: 20%;
-        margin-top: 7%;
-    }
+#A,
+#B,
+#C,
+#D,
+#E,
+#F,
+#G,
+#H,
+#I,
+#J,
+#K,
+#L,
+#M,
+#N,
+#O,
+#P,
+#Q,
+#R,
+#S,
+#T,
+#U,
+#F,
+#V,
+#W,
+#X,
+#Y,
+#Z {
+  font-weight: bold;
+  line-height: 35px;
+  cursor: default;
+}
 
-   
-    .hero__aandoeningen__container-2__line {
-        width: 580px;
-    border: 0.03rem solid #416CBF;
-    background-color: #416CBF;
-    margin-left: 20%;
-    margin-bottom: 5%;
-    }
+/* CONTACT.PHP */
 
-    #A, #B, #C, #D, #E, #F, #G, #H, #I ,#J ,#K, #L ,#M,#N,#O,#P,#Q,#R,#S,#T,#U,#F,#V,#W,#X,#Y,#Z {
-        font-weight: bold;
-        line-height: 35px;
-        cursor:default;
-    }
+.contact__container {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 10%;
+  color: white;
+}
 
+.contact-input {
+  border: 1px solid #fff;
+  background: rgba(0, 0, 255, 0);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 10px;
+}
 
+.contact-form textarea {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+.contact-input::placeholder {
+  color: rgb(211, 211, 211);
+  font-size: 0.7rem;
+  text-align: center;
+}
 
+.contact-submit {
+  color: #2148c0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  padding-inline: 30px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
 
-   
-
-    /* CONTACT.PHP */
-
-    .contact__container {
-   justify-content: center;
-   text-align: center;
-   align-items: center;
-   margin-top: 10%;
-   color: white;
-    }
-
-    .contact-input{
-        border: 1px solid #FFF;
-        background: rgba(0, 0, 255, 0);
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        margin-top: 10px;
-    }
-
-
-    .contact-form textarea {
-        padding-top: 0.8rem;
-        padding-bottom: 0.8rem;
-    }
-    .contact-input::placeholder {
-        color: rgb(211, 211, 211);
-        font-size: 0.7rem;
-        text-align: center;
-    }
-
-    .contact-submit {
-        color: #2148C0;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
-    padding-inline: 30px;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    }
-
-
-    .contact__form__container {
-        background-color: #416CBF;
-
-    }
+.contact__form__container {
+  background-color: #416cbf;
+}

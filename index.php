@@ -166,5 +166,5 @@ require 'includes/db_connection.php';
 
 
 ?>
-
+<script src="script.js"></script>
 </html>

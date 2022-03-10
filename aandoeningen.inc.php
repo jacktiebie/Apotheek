@@ -15,17 +15,16 @@ require 'includes/db_connection.php';
         $result = mysqli_query($conn, $sql);
         $queryResult = mysqli_num_rows($result);
         if ($queryResult > 0) {
+            echo "Er zijn " . $queryResult . " resultaten gevonden!";
             while ($row = mysqli_fetch_assoc($result)) {
-                echo "Er zijn " . $queryResult. " resultaten gevonden!";
-                ?>
-               <br> <a id="<?php echo $row['naam']; ?>" href="aandoeningen/<?php echo $row['ID']; ?>.php"><?php echo $row['naam']; ?></a> <br> 
-               <?php
+              
+    ?>
+                <br> <a id="<?php echo $row['naam']; ?>" href="aandoeningen/<?php echo $row['ID']; ?>.php"><?php echo $row['naam']; ?></a> <br>
+    <?php
             }
         } else {
             echo "Er zijn geen resultaten gevonden!";
         }
-    
-        
     }
 
 
