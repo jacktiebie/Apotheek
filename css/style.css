@@ -400,3 +400,19 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
 }
+
+
+/* WEB SHOP */
+
+.shop {
+  background-color:#2148c0;
+  height: 60vh;
+}
+
+.shop__container {
+  display: flex;
+ flex-direction: column;
+ justify-content: center;
+align-items: center;
+margin-top: 6rem;
+}
