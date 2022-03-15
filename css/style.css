@@ -231,7 +231,7 @@ nav ul li a:hover {
 
 .footer__grid {
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr 1fr;
+  grid-template-columns: 3fr 1fr 1.15fr 1fr;
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 3%;
@@ -415,4 +415,54 @@ nav ul li a:hover {
  justify-content: center;
 align-items: center;
 margin-top: 6rem;
+}
+
+
+.shop__left {
+  background-color: #FFF;
+  margin-right: 10%;
+}
+
+.shop__right {
+  background-color: #FFF;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  gap: 0% 10%;
+  overflow: hidden;
+}
+
+.shop__right__item {
+  height: 40vh;
+}
+.shop__right__item__name {
+  color: #19191D;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.shop__right__item__price {
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.shop__right__item__stock {
+  color: #5E6366;
+  font-size: 14px;
+}
+
+.shop__right__item__flex {
+  display: flex;
+  flex-direction: row;
+  column-gap: 25%;
+}
+
+.shop__right__item__preview {
+  width: 70%;
+}
+
+.shop__grid {
+  display: grid;
+  grid-template-columns: 30% 60%;
 }
