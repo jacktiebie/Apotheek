@@ -1,10 +1,41 @@
 <?php
+session_start();
 //include database connection
 include 'includes/db_connection.php';
 
+//create cart if it doesn't exist
+if (!(isset($_SESSION['cart']))) {
+    $_SESSION['cart'] = array();
+} //if cart
 
-  
+$out = "";
+//buy
+if (isset($_GET['id'])) {
+    $pID = $_GET['id'];
+    $quan = $_GET['quantity'];
+    if ($quan > 0 && filter_var($quan, FILTER_VALIDATE_INT)) {
+        if (isset($_SESSION['cart'][$pID])) {
+            $_SESSION['cart'][$pID] += $quan;
+            echo "yo";
+        } else {
+            $_SESSION['cart'][$pID] = $quan;
+            echo "Hey";
+        } //if buy case
+    } else {
+        echo $out = "Bad Input";
+    } //if bad input
+} //isset
 
+
+//clear cart
+if(isset($_GET['clear'])) {
+    $_SESSION['cart'] = array();
+}
+
+//print_r the cart
+echo "<pre>";
+print_r($_SESSION['cart']);
+echo "</pre>";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +54,7 @@ include 'includes/db_connection.php';
         <?php include_once 'header.php'; ?>
         <div class="shop__container">
             <h2>Vind de juiste medicijnen voor u</h2>
-            <form class="hero__container__form" action="includes/medicijnen.inc.php" method="GET">
+            <form class="hero__container__form" action="includes/medicijnen.inc.php" method="POST">
                 <input class="hero__container__form-input" placeholder="Vind medicijnen in onze webshop" type="text" name="medicijnen-query" />
                 <input class="hero__container__form-search" name="medicijnen-submit" type="submit" value="Search" />
             </form>
@@ -35,44 +66,31 @@ include 'includes/db_connection.php';
         </div>
         <div class="shop__right">
             <?php
-
-            //creating an array to put in the medicines ID?
-$shoppingCart = [];
-
-
-if (!isset($_POST["submit1"])) {
-} else {
-    echo var_dump($shoppingCart);
-
-}
-
+            //showcase products from database
             $query = "SELECT * FROM products ORDER BY id ASC";
             $result = mysqli_query($conn, $query);
             if (mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_array($result)) {
-            ?>
+                while ($row = mysqli_fetch_array($result)) { ?>
                     <div>
-                        <form method="post" action="<?php array_push($shoppingCart, "banana", "orange"); ?>">
-                            <img src="images/paracetamol.png"/><br />
-
+                        <form method="get" action="medicijnen-winkel.php">
+                            <img src="images/paracetamol.png" /><br />
                             <h4 class="shop__right__item__name"><?php echo $row["name"]; ?></h4>
-
-                            <h4 class="shop__right__item__price">$ <?php echo $row["price"]; ?></h4>
-                        
+                            <h4 class="shop__right__item__price"><?php echo $row["price"]; ?></h4>
+                            <h4><?php echo $row["quantity"]; ?></h4>
                             <input type="text" name="quantity" value="1" class="form-control" />
-
+                            <input type="hidden" name="id" id="id" value='<?php echo $row['id'] ?>'>
                             <input type="submit" name="submit1" style="margin-top:5px;" value="Add to Cart" />
-
                         </form>
                     </div>
             <?php
                 }
-            } 
+            }
             ?>
         </div>
+        <a href="<?php echo $_SERVER['PHP_SELF'];?>?clear=1">Clear Cart</a>
     </div>
 
-    
+
 </body>
 
 </html>

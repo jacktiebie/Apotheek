@@ -21,9 +21,9 @@ require 'includes/db_connection.php';
             <h1 class="hero__container__title">Apotheek Schut zorgt voor uw medicijnvoorschriften</h1>
             <p class="hero__container__subtitle">We hebben alle medicijnen die uw arts heeft voorgeschreven voor uw gezondheid bovendien kunnen we ze bij
                 u bezorgen</p>
-            <form class="hero__container__form" action="#" method="GET">
-                <input class="hero__container__form-input" placeholder="Vind medicijnen in onze webshop" type="text" name="query" />
-                <input class="hero__container__form-search" type="submit" value="Search" />
+            <form class="hero__container__form" action="includes/medicijnen.inc.php" method="POST">
+                <input class="hero__container__form-input" placeholder="Vind medicijnen in onze webshop" type="text" name="medicijnen-query" />
+                <input class="hero__container__form-search" name="medicijnen-submit" type="submit" value="Search" />
             </form>
         </div>
     </section>
