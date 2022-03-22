@@ -22,11 +22,10 @@ if (empty($_SESSION['cart'])) {
     $id = (int) $row['ID'];
     $name = $row['usersName'];
 
+
     $sql2 = "SELECT * from users_address where users_ID = '$id'";
     $lol2 = mysqli_query($conn, $sql2);
     $row2 = mysqli_fetch_array($lol2);
-    $id2 = (int) $row2['users_ID'];
-
 
 
 
@@ -37,22 +36,23 @@ if (empty($_SESSION['cart'])) {
 
     // Performing insert query execution
     // here our table name is college
-    if (!$id === $id2) {
+
+        //check if address is not already in database if it is not in the database put the data inside the database
+        if ($row2 == null) {
         $sql = "INSERT INTO users_address (users_ID, adress_line, city, postal_code, country)  VALUES ('$id','$Address', 
             '$City','$PostalCode','$Country')";
 
         if (mysqli_query($conn, $sql)) {
-            echo "<h3>data stored in a database successfully."
-                . " Please browse your localhost php my admin"
-                . " to view the updated data</h3>";
+            echo "<h3>ADDRESSSDONE</h3>";
 
-            echo nl2br("\n$first_name\n $last_name\n "
-                . "$gender\n $address\n");
         } else {
             echo "ERROR: Hush! Sorry $sql. "
                 . mysqli_error($conn);
         }
+    } else {
+     
     }
+    
 
 
 
@@ -88,14 +88,10 @@ if (empty($_SESSION['cart'])) {
     $grand = 0;
     $sqlorder = "INSERT INTO order_details (users_id, total)  VALUES ('$id','$grand')";
 
-    if (mysqli_query($conn, $sqlorder)) {
-        echo "<h3>data stored in a database successfully."
-            . " Please browse your localhost php my admin"
-            . " to view the updated data</h3>";
-    } else {
-        echo "ERROR: Hush! Sorry $sqlorder "
-            . mysqli_error($conn);
-    }
+    if (!mysqli_query($conn, $sqlorder)) {
+        echo "ERROR:"
+        . mysqli_error($conn);
+    } 
 
     $idDetailed = "SELECT * FROM order_details WHERE users_id = $id AND total = $grand;";
     $idDetailed2 = mysqli_query($conn, $idDetailed);
@@ -121,14 +117,10 @@ if (empty($_SESSION['cart'])) {
         $sqlinsert = "INSERT INTO order_items (order_id, product_id, quantity) VALUES  ($idDetailed4,
         $product, 
         $val)";
-        if (mysqli_query($conn, $sqlinsert)) {
-            echo "<h3>data stored in a database successfully."
-                . " Please browse your localhost php my admin"
-                . " to view the updated data</h3>";
-        } else {
-            echo "ERROR: Hush! Sorry "
-                . mysqli_error($conn);
-        }
+        if (!mysqli_query($conn, $sqlinsert)) {
+            echo "ERROR:"
+            . mysqli_error($conn);
+        } 
     } //foreach
 
     echo "Grand Total: $grand";

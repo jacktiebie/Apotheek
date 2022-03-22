@@ -1,4 +1,4 @@
-## Flag for GoDaddy
+##Flag for My GoDaddy Hosting
 Options +MultiViews
 
 RewriteBase /
@@ -8,19 +8,9 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
-## Redirect from extensions to non-extensions
-RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
-RewriteRule ^ /%1 [R=301,NE,L]
 
 ## Create Error Pages
 ErrorDocument 404 /errors/404.html
 ErrorDocument 403 /errors/403.html
 ErrorDocument 500 /errors/500.html
 ErrorDocument 401 /errors/401.html
-
-## Redirect non-existing pages to index.php
-Options +SymLinksIfOwnerMatch
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
