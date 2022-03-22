@@ -26,7 +26,7 @@ if(isset($_GET['pID'])) {
         echo "Bad Input";
     }//if valid quan
 } //isset
-
+if (isset($_SESSION["useruid"])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -112,7 +112,12 @@ if(isset($_GET['pID'])) {
 
 <input type="submit" value="Check Out">
     </form>
-
+<?php 
+}
+else {
+    echo "<a href='login.php'class='hero__cta'>Login Before Accessing Your Cart</a>";
+}
+?>
 
 </body>
 

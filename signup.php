@@ -33,6 +33,7 @@
             <button type="submit" name="submit">Sign Up</button>
         </form>
         </div>
+        <a href="reset-password.php">Forgot your password?</a>
         <?php 
    if (isset($_GET["error"])) {
        if ($_GET['error'] == "emptyinput") {
@@ -55,6 +56,9 @@
        }
        else if ($_GET["error"] == "none") {
            echo "<p>U bent ingelogd</p>";
+       }
+       else if ($_GET["newpwd"] == "passwordupdated") {
+           echo "<p>Your password is updated!</p>";
        }
    }
     ?>

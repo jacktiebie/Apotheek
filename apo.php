@@ -1,3 +1,7 @@
+<?php
+if (isset($_SESSION["useruid"])) {
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,5 +22,10 @@
      </ul>
      <a href="">Sign out</a>
  </aside>
+ <?php
+} else {
+    echo "<a href='login.php'class='hero__cta'>Login Before Accessing Your APO</a>";
+}
+?>
 </body>
 </html>
