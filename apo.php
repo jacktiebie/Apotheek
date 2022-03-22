@@ -1,4 +1,6 @@
 <?php
+require 'includes/db_connection.php';
+session_start();
 if (isset($_SESSION["useruid"])) {
 ?>
 
@@ -17,10 +19,10 @@ if (isset($_SESSION["useruid"])) {
         <aside class="APO__aside">
             <a href="">Logo</a>
             <ul>
-                <a href="">Orders</a>
+                <a href="apo-orders.php">Orders</a>
                 <a href="">Invoices</a>
-                <a href="">Help</a>
-                <a href="">Settings</a>
+                <a href="apo-help.php">Help</a>
+                <a href="apo-settings.php">Settings</a>
             </ul>
             <a href="">Sign out</a>
         </aside>

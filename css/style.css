@@ -380,10 +380,11 @@ nav ul li a:hover {
   background-color: #416cbf;
 }
 
+
 /* APO */
 
 .APO__aside {
-  background-color: blue;
+  background-color: lightgray;
   float: left;
   display: flex;
   flex-direction: column;
@@ -395,6 +396,15 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
 }
+
+.apo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.apo-orders__black h3 {
+  font-size: 20px;
+}
+
 
 /* WEB SHOP */
 
