@@ -17,7 +17,7 @@ require 'includes/db_connection.php';
 
 <body>
     <section class="hero__aandoeningen">
-    <?php  include_once 'header.php' ?>
+        <?php include_once 'header.php' ?>
         <div class="hero__container">
             <h1 class="hero__container__title">Betrouwbare informatie over ziekte en gezondheid</h1>
             <p class="hero__container__subtitle">In samenwerking met Thuisarts.nl bieden wij u </br> gezondheidsinormatie. </p>

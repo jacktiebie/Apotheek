@@ -13,9 +13,7 @@ if (isset($_POST["submit"])) {
     }
 
     loginUser($conn, $usrname, $pwd);
-}
-else {
+} else {
     header("loction: ../login.php");
     exit();
 }
-

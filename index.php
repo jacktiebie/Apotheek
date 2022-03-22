@@ -17,7 +17,7 @@ session_start();
 
 <body>
     <section class="hero">
-        <?php  include_once 'header.php' ?>
+        <?php include_once 'header.php' ?>
         <div class="hero__container">
             <h1 class="hero__container__title">Apotheek Schut zorgt voor uw medicijnvoorschriften</h1>
             <p class="hero__container__subtitle">We hebben alle medicijnen die uw arts heeft voorgeschreven voor uw gezondheid bovendien kunnen we ze bij
@@ -154,4 +154,5 @@ session_start();
 
 ?>
 <script src="script.js"></script>
+
 </html>

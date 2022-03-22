@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Login</title>
 </head>
+
 <body>
     <section class="contact__form__container">
         <header>
@@ -21,25 +22,25 @@
                     <li><a href="#">Medicijnen</a></li>
                 </ul>
             </nav>
-        
+
         </header>
         <div class="contact__container">
             <p>LOGIN</p>
             <form class="contact-form" action="includes/login.inc.php" method="post">
-            <input type="text" name="uid" placeholder="Gebruikersnaam/Email" >
-            <input type="password" name="pwd" placeholder="Wachtwoord" >
-            <button type="submit" name="submit">Log In</button>
+                <input type="text" name="uid" placeholder="Gebruikersnaam/Email">
+                <input type="password" name="pwd" placeholder="Wachtwoord">
+                <button type="submit" name="submit">Log In</button>
         </div>
-        <?php 
-   if (isset($_GET["error"])) {
-       if ($_GET['error'] == "emptyinput") {
-        echo "<p>Vul alle velden in</p>";
-       }
-       else if ($_GET["error"] == "wronglogin") {
-        echo "<p>Incorrecte login informatie</p>";
-       }
-   }
-    ?>
+        <?php
+        if (isset($_GET["error"])) {
+            if ($_GET['error'] == "emptyinput") {
+                echo "<p>Vul alle velden in</p>";
+            } else if ($_GET["error"] == "wronglogin") {
+                echo "<p>Incorrecte login informatie</p>";
+            }
+        }
+        ?>
     </section>
 </body>
+
 </html>

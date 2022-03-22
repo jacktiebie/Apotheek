@@ -123,5 +123,3 @@ function createUser($conn, $name, $email, $usrname, $pwd) {
             exit();
         }
     }
-
-?>

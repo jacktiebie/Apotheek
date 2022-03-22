@@ -76,7 +76,6 @@ nav ul li a:hover {
   text-decoration: none;
 }
 
-
 .hero__container {
   margin-left: 10%;
   color: white;
@@ -381,10 +380,7 @@ nav ul li a:hover {
   background-color: #416cbf;
 }
 
-
-
 /* APO */
-
 
 .APO__aside {
   background-color: blue;
@@ -395,36 +391,33 @@ nav ul li a:hover {
   width: 13vw;
 }
 
-
-.APO__aside ul  {
+.APO__aside ul {
   display: flex;
   flex-direction: column;
 }
 
-
 /* WEB SHOP */
 
 .shop {
-  background-color:#2148c0;
+  background-color: #2148c0;
   height: 60vh;
 }
 
 .shop__container {
   display: flex;
- flex-direction: column;
- justify-content: center;
-align-items: center;
-margin-top: 6rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
 }
 
-
 .shop__left {
-  background-color: #FFF;
+  background-color: #fff;
   margin-right: 10%;
 }
 
 .shop__right {
-  background-color: #FFF;
+  background-color: #fff;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 
@@ -436,7 +429,7 @@ margin-top: 6rem;
   height: 40vh;
 }
 .shop__right__item__name {
-  color: #19191D;
+  color: #19191d;
   font-size: 16px;
   font-weight: 500;
 }
@@ -448,7 +441,7 @@ margin-top: 6rem;
 }
 
 .shop__right__item__stock {
-  color: #5E6366;
+  color: #5e6366;
   font-size: 14px;
 }
 

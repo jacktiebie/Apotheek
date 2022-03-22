@@ -17,7 +17,7 @@ require 'db_connection.php';
         if ($queryResult > 0) {
             echo "Er zijn " . $queryResult . " resultaten gevonden!";
             while ($row = mysqli_fetch_assoc($result)) {
-              
+
     ?>
                 <br> <a id="" href=""><?php echo $row['name']; ?></a> <br>
     <?php
