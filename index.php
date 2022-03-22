@@ -1,5 +1,6 @@
 <?php
 require 'includes/db_connection.php';
+session_start();
 ?>
 
 <!DOCTYPE html>

@@ -10,16 +10,14 @@ if (!(isset($_SESSION['cart']))) {
 
 $out = "";
 //buy
-if (isset($_GET['id'])) {
-    $pID = $_GET['id'];
+if (isset($_GET['ID'])) {
+    $pID = $_GET['ID'];
     $quan = $_GET['quantity'];
     if ($quan > 0 && filter_var($quan, FILTER_VALIDATE_INT)) {
         if (isset($_SESSION['cart'][$pID])) {
             $_SESSION['cart'][$pID] += $quan;
-            echo "yo";
         } else {
             $_SESSION['cart'][$pID] = $quan;
-            echo "Hey";
         } //if buy case
     } else {
         echo $out = "Bad Input";
@@ -32,10 +30,14 @@ if(isset($_GET['clear'])) {
     $_SESSION['cart'] = array();
 }
 
+
 //print_r the cart
-echo "<pre>";
-print_r($_SESSION['cart']);
-echo "</pre>";
+//echo "<pre>";
+//print_r($_SESSION['cart']);
+//echo "</pre>";
+
+if (isset($_SESSION["useruid"])) {
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,8 +68,8 @@ echo "</pre>";
         </div>
         <div class="shop__right">
             <?php
-            //showcase products from database
-            $query = "SELECT * FROM products ORDER BY id ASC";
+            //showcase medicines from database
+            $query = "SELECT * FROM medicines ORDER BY name ASC";
             $result = mysqli_query($conn, $query);
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_array($result)) { ?>
@@ -75,10 +77,10 @@ echo "</pre>";
                         <form method="get" action="medicijnen-winkel.php">
                             <img src="images/paracetamol.png" /><br />
                             <h4 class="shop__right__item__name"><?php echo $row["name"]; ?></h4>
-                            <h4 class="shop__right__item__price"><?php echo $row["price"]; ?></h4>
-                            <h4><?php echo $row["quantity"]; ?></h4>
+                            <h4 class="shop__right__item__price">$<?php echo $row["price"]; ?></h4>
+                            <h4>In stock: <?php echo $row["quantity"]; ?></h4>
                             <input type="text" name="quantity" value="1" class="form-control" />
-                            <input type="hidden" name="id" id="id" value='<?php echo $row['id'] ?>'>
+                            <input type="hidden" name="ID" id="ID" value='<?php echo $row['ID'] ?>'>
                             <input type="submit" name="submit1" style="margin-top:5px;" value="Add to Cart" />
                         </form>
                     </div>
@@ -91,6 +93,12 @@ echo "</pre>";
     </div>
 
 
+    <?php
+    }
+     else {
+        echo "<a href='login.php'class='hero__cta'>Login Before Accessing The Webshop</a>";
+    }
+    ?>
 </body>
 
 </html>

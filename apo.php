@@ -11,7 +11,7 @@
  <aside class="APO__aside">
      <a href="">Logo</a>
      <ul>
-         <a href="">Transactions</a>
+         <a href="">Orders</a>
          <a href="">Invoices</a>
          <a href="">Help</a>
          <a href="">Settings</a>

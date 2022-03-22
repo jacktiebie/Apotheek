@@ -49,9 +49,10 @@ if(isset($_GET['pID'])) {
         <th>Item</th><th>Price</th><th>Quantity</th><th>Subtotal</th>
     </tr>
     <?php
+    
     $grand = 0;
     foreach($_SESSION['cart'] as $key => $val) {
-        $sql = "SELECT * FROM products where id = '$key'";
+        $sql = "SELECT * FROM medicines where ID = '$key'";
         $result = mysqli_query($conn, $sql) or die("BAD SQL: $sql");
         $row = mysqli_fetch_assoc($result);
 
@@ -85,6 +86,32 @@ if(isset($_GET['pID'])) {
 
     <a href="<?php echo $_SERVER['PHP_SELF'];?>?clear=1">Clear Cart</a>
     </div>
+
+    <h4>Personal Details</h4>
+    <form action="includes/checkout.inc.php" method="get">
+        <label for="address">Address</label>
+    <input type="textarea" name="address" >
+
+    <label for="city">City</label>
+   <input type="text" name="city" >
+
+   <label for="postal_code">Postal Code</label>
+   <input type="textarea" name="postal_code" >
+
+   <label for="country">Country</label>
+   <input name="country" list="countries">
+
+<datalist id="countries">
+  <option value="Netherlands">
+  <option value="England">
+  <option value="Germany">
+  <option value="France">
+  <option value="South Africa">
+</datalist>
+
+
+<input type="submit" value="Check Out">
+    </form>
 
 
 </body>
