@@ -30,9 +30,9 @@ if (empty($_SESSION['cart'])) {
 
 
 
-
-
-
+if ($row['owe'] == 1) {
+    
+}
 
     // Performing insert query execution
     // here our table name is college

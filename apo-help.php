@@ -39,24 +39,25 @@ $id = $row['ID'];
                 <input class="apo__help__form-search" name="medicijnen-submit" type="submit" value="Krijg hulp" />
             </form>
             <div class="apo-help__container-flex-2">
-            <p class="apo-help__subtitle">We raden aan om eerst onze database te gebruiken voor hulp,</br> maar als u liever een ticket opent, alstublieft </p> <a class="apo-help__sublink" href=""></br> klik hier</a> 
+            <span class="apo-help__subtitle">We raden aan om eerst onze database te gebruiken voor hulp, maar als u liever een ticket opent, alstublieft </span> <a class="apo-help__sublink" href="">  klik hier</a> 
             </div>
         </div>
             <div class="help-grid">
             <div class="help__faq">
-     <h2 class="apo-help__faq">Frequently Asked Questions</h2>
+                <div class="apo-help__flex-3">
+            <img class="apo-help__question-icon" src="images/icone-point-d-interrogation-question-bleu.png" alt="Question Mark Icon"><h2 class="apo__help-title-2">Frequently Asked Questions</h2>
+            </div>
      <div class="help__faq__question-1">
-             <h3>Q.Frequently asked question title?</h3>
-             <p>A. Answer the frequently asked question here.
-             </p>
+             <h3 class="help__faq-blue">Q. Frequently asked question title? </h3>
+             <p class="help__faq__question-1-answer">A. Answer the frequently asked question here.</p>
      </div>
      </div>
      <div class="help__database">
-    <h2>Knowledgebase</h2>
-    <p>Our knowledgebase is full of troubleshooting topics that will help you solve any problems you may have when using the system.</p>
-    <a href="">- Quick start</a>
-    <a href="">- Client guide</a>
-    <a href="">- Consultants guide</a>
+     <div class="apo-help__flex-3"> <img class="apo-help__question-icon" src="images/icone-point-d-interrogation-question-bleu.png" alt="Question Mark Icon"><h2 class="apo__help-title-2">Knowledgebase</h2></div>
+    <p class="help__database-subtitle">Our knowledgebase is full of troubleshooting topics that will help you solve any problems you may have when using the system.</p>
+    <a href="">- Quick start</a> </br>
+    <a href="">- Client guide</a> </br>
+    <a href="">- Consultants guide</a> </br>
     <a href="">- Templates & Appereance</a>
     </div>
     </div>

@@ -384,7 +384,7 @@ nav ul li a:hover {
 /* APO */
 
 .APO__aside {
-  background-color: #1bc768;
+  background-color: #416cbf;;
   float: left;
   display: flex;
   flex-direction: column;
@@ -467,9 +467,9 @@ width: 120px;
   padding-bottom: 6%;
 }
 .apo-help__container-flex-2 {
-  display: flex;
-  flex-direction: row;
+  display: block;
   margin-top: 20px;
+  max-width: 600px;
 }
 .apo__help__form-search {
   padding: 0.5rem;
@@ -491,6 +491,46 @@ width: 120px;
   border: none;
   background-color: #dee9ff;
   color: #7a7a7a;
+}
+.apo-help__flex-3 {
+  display: flex;
+  flex-direction: row;
+}
+.help__faq__question-1 {
+  background-color: #87c5ec44;
+  margin-top: 10%;
+  padding: 8%;
+}
+
+.help__database-subtitle {
+  padding-top: 8%;
+  font-size: 0.75rem;
+  margin-bottom: 5%;
+}
+.help__database a {
+  display: inline-block;
+  color: blue;
+  margin-top: 2%;
+  font-size: 0.9rem;
+}
+
+.help__faq__question-1-answer {
+  padding-top: 5%;
+  color: #000;
+}
+
+.apo__help-title-2 {
+font-size: 1.2rem;
+padding-top: 3.5px;
+}
+.help__faq-blue {
+  color: #2148c0;
+  font-size: 1rem;
+}
+.apo-help__question-icon {
+  width: 50px;
+  height: 30px;
+  padding-right: 15px;
 }
 
 
