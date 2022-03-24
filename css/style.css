@@ -384,27 +384,123 @@ nav ul li a:hover {
 /* APO */
 
 .APO__aside {
-  background-color: lightgray;
+  background-color: #1bc768;
   float: left;
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 13vw;
+  padding-left: 1.5%;
+  padding-top: 3%;
 }
 
 .APO__aside ul {
   display: flex;
   flex-direction: column;
+  padding-left: 14%;
+  padding-top: 50%;
+}
+.APO__aside a {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  padding: 10% 0%;
+}
+
+.APO__aside__sign-out a {
+  display: inline-block;
+ 
 }
 
 .apo-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-.apo-orders__black h3 {
-  font-size: 20px;
+  grid-template-columns: 2fr 1fr 2fr 1fr 2fr 2fr;
+  text-align: center;
+  max-width: 1000px;
+  gap: 6%;
+  margin-top: 5%;
+
 }
 
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.apo-orders__title {
+margin-top: 10%;
+text-align: center;
+}
+
+.apo-orders__black  {
+  font-size: 1rem;
+}
+
+
+.profile__picture {
+border-radius: 50%;
+height: 120px;
+width: 120px;
+}
+
+/* APO HELP */
+.apo-help__title {
+  color: gray;
+}
+.apo-help__subtitle {
+  color: gray;
+  font-size: 0.8rem;
+}
+.apo-help__sublink {
+  color: blue;
+  font-size: 0.8rem;
+}
+.apo-help__container-flex-1 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding-top: 8%;
+  padding-bottom: 6%;
+}
+.apo-help__container-flex-2 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.apo__help__form-search {
+  padding: 0.5rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  float: left;
+  height: 2.5rem;
+  border: none;
+  background-color: #416cbf;
+  color: white;
+}
+.apo__help__form-input {
+  padding: 0.5rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  width: 20rem;
+  height: 2.5rem;
+  float: left;
+  border: none;
+  background-color: #dee9ff;
+  color: #7a7a7a;
+}
+
+
+.help-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+ justify-content: center;
+ padding-inline: 10%;
+ gap: 30%;
+}
 
 /* WEB SHOP */
 
