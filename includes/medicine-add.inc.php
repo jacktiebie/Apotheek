@@ -38,3 +38,4 @@ else {
     echo "Something went wrong. Please try again!";
     header("Location: ../admin.php");
 }
+

@@ -55,7 +55,7 @@ if (isset($_SESSION["useruid"])) {
         <section class="shop">
             <?php include_once 'header.php'; ?>
             <div class="shop__container">
-                <h2>Vind de juiste medicijnen voor u</h2>
+                <h2 class="shop_h2">Vind de juiste medicijnen voor u</h2>
                 <form class="hero__container__form" action="includes/medicijnen.inc.php" method="POST">
                     <input class="hero__container__form-input" placeholder="Vind medicijnen in onze webshop" type="text" name="medicijnen-query" />
                     <input class="hero__container__form-search" name="medicijnen-submit" type="submit" value="Search" />
@@ -75,7 +75,7 @@ if (isset($_SESSION["useruid"])) {
                     while ($row = mysqli_fetch_array($result)) { ?>
                         <div>
                             <form method="get" action="medicijnen-winkel.php">
-                                <img src="images/paracetamol.png" /><br />
+                                <img  class="shop__right__item__img"src="images/placeholder.png" /><br />
                                 <h4 class="shop__right__item__name"><?php echo $row["name"]; ?></h4>
                                 <h4 class="shop__right__item__price">$<?php echo $row["price"]; ?></h4>
                                 <h4>In stock: <?php echo $row["quantity"]; ?></h4>

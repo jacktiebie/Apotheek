@@ -11,14 +11,7 @@ $id = $row['ID'];
 //get order details using the users_id = $id
 $sql = "SELECT * FROM order_details where users_id = '$id'";
 $result = mysqli_query($conn, $sql) or die("BAD SQL");
-$row = mysqli_fetch_assoc($result);
 
-
-if ((float)$row['shipped'] == 0) {
-    $shipped = "<p class='red'>Not shipped</p>";
-} else {
-    $shipped = "<ps class='green'>Shipped</p>";
-}
 
 
 ?>
@@ -45,14 +38,27 @@ if ((float)$row['shipped'] == 0) {
         </aside>
        
 <h1 class="apo-orders__title">Bekijk uw gemaakte bestellingen</h1>
+<?php
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        
+
+if ((float)$row['shipped'] == 0) {
+    $shipped = "<p class='apo-orders__p' class='red'>Not shipped</p>";
+} else {
+    $shipped = "<ps class='apo-orders__p' class='green'>Shipped</p>";
+}
+        
+        ?>
+    
 <div class="apo-grid">
     <div class="apo-orders__number">
 <h3 class="apo-orders__black">Bestellings nummer</h3>
-<p>#<?php echo $row["ID"];?></p>
+<p class="apo-orders__p">#<?php echo $row["ID"];?></p>
 </div>
 <div class="apo-orders__total">
 <h3 class="apo-orders__black">Bedrag</h3>
-<p>€<?php echo $row["total"];?></p>
+<p class="apo-orders__p">€<?php echo $row["total"];?></p>
 </div>
 <div class="apo-orders__items">
 <h3 class="apo-orders__black">Ordered Items</h3>
@@ -63,15 +69,17 @@ if ((float)$row['shipped'] == 0) {
 </div>
 <div class="apo-orders__track">
 <h3 class="apo-orders__black">Tracking Number</h3>
-<p><?php echo $row["tracking_number"]; ?></p>
+<p class="apo-orders__p"><?php echo $row["tracking_number"]; ?></p>
 </div>
 <div class="apo-orders__date">
 <h3 class="apo-orders__black">Datum</h3>
-<p><?php echo $row["created_at"]; ?></p>
+<p class="apo-orders__p"><?php echo $row["created_at"]; ?></p>
 </div>
 </div>
 
 <?php
+    } 
+}
 } else {
     echo "<a href='login.php'class='hero__cta'>Login Before Accessing Your APO</a>";
 }

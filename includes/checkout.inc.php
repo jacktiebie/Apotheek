@@ -30,9 +30,6 @@ if (empty($_SESSION['cart'])) {
 
 
 
-if ($row['owe'] == 1) {
-    
-}
 
     // Performing insert query execution
     // here our table name is college
@@ -49,9 +46,7 @@ if ($row['owe'] == 1) {
             echo "ERROR: Hush! Sorry $sql. "
                 . mysqli_error($conn);
         }
-    } else {
-     
-    }
+    } 
     
 
 
@@ -92,6 +87,8 @@ if ($row['owe'] == 1) {
         echo "ERROR:"
         . mysqli_error($conn);
     } 
+     $idcost = mysqli_insert_id($conn);
+    
 
     $idDetailed = "SELECT * FROM order_details WHERE users_id = $id AND total = $grand;";
     $idDetailed2 = mysqli_query($conn, $idDetailed);
@@ -112,19 +109,35 @@ if ($row['owe'] == 1) {
         </tr>
         ";
 
-
-
         $sqlinsert = "INSERT INTO order_items (order_id, product_id, quantity) VALUES  ($idDetailed4,
         $product, 
         $val)";
+
         if (!mysqli_query($conn, $sqlinsert)) {
+            echo "ERROR:"
+            . mysqli_error($conn);
+        } 
+        $sqlmodify = "UPDATE medicines SET quantity = quantity - $val WHERE ID = '$product'";
+
+        if (!mysqli_query($conn, $sqlmodify)) {
             echo "ERROR:"
             . mysqli_error($conn);
         } 
     } //foreach
 
     echo "Grand Total: $grand";
-}
+
+    $sqlmodify = "UPDATE order_details SET total = $grand WHERE ID = '$idDetailed4'";
+        if (!mysqli_query($conn, $sqlmodify)) {
+            echo "ERROR:"
+            . mysqli_error($conn);
+        } 
+    } //foreach
+    $sql = "UPDATE order_details SET total = $grand WHERE ID = $idcost;";
+    mysqli_query($conn, $sql);
+
+    $_SESSION['cart'] = array();
+
     ?>
     </body>
 
