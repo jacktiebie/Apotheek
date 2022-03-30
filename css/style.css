@@ -729,7 +729,7 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 .admin-grid-orders-2{
   padding-left: 3rem;
-  padding-top: 0.5rem;
+  padding-top: 1.3rem;
   grid-row-start: 2;
 grid-row-end: 4;
 grid-column-start: 1;
@@ -741,7 +741,7 @@ width: 720px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 admin-grid-orders-2 th, td {
-  padding-inline: 60px;
+  padding-inline: 55px;
   padding-top: 8px;
   padding-bottom: 5px;
   font-size: 0.9rem;
