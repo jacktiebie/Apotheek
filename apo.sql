@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 30 mrt 2022 om 20:07
+-- Gegenereerd op: 31 mrt 2022 om 15:45
 -- Serverversie: 10.4.21-MariaDB
 -- PHP-versie: 8.0.12
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `apotheekschut`
 --
+CREATE DATABASE IF NOT EXISTS `apotheekschut` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `apotheekschut`;
 
 -- --------------------------------------------------------
 
@@ -108,6 +110,27 @@ INSERT INTO `aandoeningen` (`ID`, `naam`) VALUES
 (70, 'Z'),
 (71, 'Zenuwen klem in buikwand'),
 (72, 'Zweten');
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `contact`
+--
+
+CREATE TABLE `contact` (
+  `ID` int(11) NOT NULL,
+  `naam` varchar(20) NOT NULL,
+  `onderwerp` text NOT NULL,
+  `bericht` text NOT NULL,
+  `mail` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `contact`
+--
+
+INSERT INTO `contact` (`ID`, `naam`, `onderwerp`, `bericht`, `mail`) VALUES
+(1, 'Jack Tiebie', 'we', 'jacktiebie@gmail.com', 'wewewwee');
 
 -- --------------------------------------------------------
 
@@ -310,7 +333,8 @@ INSERT INTO `users` (`ID`, `usersName`, `usersEmail`, `usersUid`, `usersPwd`) VA
 (7, 'meow', 'meow@gmail.com', 'meowmeoww', '$2y$10$EVJ6KWAbWUe7BiL8sWvej.MG0wpO2RK6RBAEhzbAlsEAsDhrmpPTG'),
 (8, 'Jack Tiebie', '256251@cursist.rockopnh.nl', 'Jackaa', '$2y$10$2Clyvt6xgFp6wkSgEkAsiOYtOdYJmPGcN9hezUsroqesz7t8a0Uva'),
 (9, 'Jason Zuk', 'jasonzuk@gmai.com', 'jason', '$2y$10$vTtLHAPvrLdmeyBa4rd8XOQam6/BPUhRYJZ1hZIJrvQeIwUkC.dZy'),
-(14, 'Jack Tiebie', 'jacktiebie@gmail.com', 'uuu', '$2y$10$66oZ08uSAT8HBu1x.fjDn.wPoOmZ1a9rw/IpVMrSTaCvENtVZB5V6');
+(14, 'Jack Tiebie', 'jacktiebie@gmail.com', 'uuu', '$2y$10$66oZ08uSAT8HBu1x.fjDn.wPoOmZ1a9rw/IpVMrSTaCvENtVZB5V6'),
+(15, 'allah tebe', 'allahtiebie@gmail.com', 'allah', '$2y$10$/lcSBzvWMItxvvK7sGUHf.zuL2ZzhlaS8SGpppWzrXKNSAsaTHKDq');
 
 -- --------------------------------------------------------
 
@@ -342,6 +366,12 @@ INSERT INTO `users_address` (`ID`, `users_ID`, `adress_line`, `city`, `postal_co
 -- Indexen voor tabel `aandoeningen`
 --
 ALTER TABLE `aandoeningen`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexen voor tabel `contact`
+--
+ALTER TABLE `contact`
   ADD PRIMARY KEY (`ID`);
 
 --
@@ -408,6 +438,12 @@ ALTER TABLE `aandoeningen`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
+-- AUTO_INCREMENT voor een tabel `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT voor een tabel `medicines`
 --
 ALTER TABLE `medicines`
@@ -447,7 +483,7 @@ ALTER TABLE `pwdreset`
 -- AUTO_INCREMENT voor een tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT voor een tabel `users_address`
