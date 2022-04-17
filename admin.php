@@ -46,19 +46,24 @@ while($row = mysqli_fetch_assoc($result)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Admin Control Panel</title>
+    <style>
+:target {
+    background-color: yellow;
+}
+</style>
 </head>
 <body>
         <aside class="admin__aside">
             <a href="index.php"><img class="admin-logo" src="images/logo/logo_black.png" alt="Profile Picture of current user"></a>
             <ul>
-            <a href="admin.php">Dashboard</a>
-                <a href="admin.php">Klanten</a>
-                <a href="admin.php">Bestellingen</a>
-                <a href="admin.php">Analyses</a>
-                <a href="admin.php">Messages</a>
-                <a href="admin-products.php">Medicijnen</a>
-                <a href="admin-news.php">Nieuws</a>
-                <a href="admin-settings.php">Settings</a>
+            <a href="admin.php"class="admin-a" >Dashboard</a>
+                <a href="admin-klanten.php" class="admin-a">Klanten</a>
+                <a href="admin.php" class="admin-a">Bestellingen</a>
+                <a href="admin.php" class="admin-a">Analyses</a>
+                <a href="admin.php" class="admin-a">Messages</a>
+                <a href="admin-products.php" class="admin-a">Medicijnen</a>
+                <a href="admin-news.php" class="admin-a">Nieuws</a>
+                <a href="admin-settings.php" class="admin-a">Settings</a>
             </ul>
             <a class="admin-sign-out" href="includes/logout.inc.php">Sign out</a>
         </aside>

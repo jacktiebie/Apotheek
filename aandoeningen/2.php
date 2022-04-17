@@ -25,7 +25,7 @@ session_start();
                 <li><a href="#">Service</a></li>
                 <li><a href="#">Voorlichting</a></li>
                 <li><a href="#">Medicijnen</a></li>
-            </ul>
+            </ul>w
         </nav>
         <?php
         if (isset($_SESSION["useruid"])) {

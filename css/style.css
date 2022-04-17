@@ -648,7 +648,7 @@ padding-top: 3.5px;
 
 .admin__aside {
   float: left;
-  height: 100vh;
+  height: 500vh;
   width: 10vw;
   background-color: rgb(248, 248, 248);
   padding-left: 35px;
@@ -666,6 +666,8 @@ padding-top: 3.5px;
   color: rgb(94, 94, 94);
   font-size: 0.9rem;
 }
+
+
 
 .admin-sign-out {
   display: inline-block;
@@ -885,5 +887,20 @@ padding-top: 12%;
 .admin-top-flex-1 {
 display: flex;
 flex-direction: column;
+}
+
+.admin-klanten-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.admin-klanten-table td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.admin-klanten-table tr:nth-child(even) {
+  background-color: #dddddd;
 }
 
